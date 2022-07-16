@@ -1,0 +1,23 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: vector
+  labels:
+    app: vector
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: vector
+  labels:
+    app: vector
+spec:
+  selector:
+    app: vector
+  template:
+    spec:
+      containers:
+        - name: vector
+          image: 
+
+    
